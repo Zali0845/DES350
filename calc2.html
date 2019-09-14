@@ -1,0 +1,372 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>calc</title>
+</head>
+<style>
+	body{
+		background-color: #D3D3D2;
+		font-family: Helvetica, Arial, sans-serif;
+		overflow-x: hidden;
+		overflow-y: hidden
+		
+	}
+	#myCalculator{
+		background-color: #EFF2FD ;
+		box-shadow: 0px 0px 25px 6px rgba(0,0,0, .25);
+	}
+	form{
+		margin: 60px auto 0;
+		width:  600px;
+		height: 810px
+	}
+	input{
+		outline:0;
+		border:none;
+		color:#000;
+		background-color: #fb8691;
+		border-radius: 0px;
+		width: 104px;
+		height: 104px;
+		float: left;
+		font-size: 20px;
+		transition-duration: 500ms;
+		border-radius:205px;
+		font-family: Helvetica, Arial, sans-serif;
+		font-size: 57px
+	}
+
+	input times{
+		background-color: #fbda91
+	}
+	
+	#top_display{
+		background-color: #1C1C1C; 
+	}
+	#display{
+		background-color: #BBB6B2;
+		display: inline-block;
+		width: 560px;
+		padding-left: 40px;
+		margin-bottom: 40px;
+		border-radius: 0px;
+		height: 153px;
+		font-size: 80px
+	}
+	.inputrow{
+		width: 600px;
+		height: 810px;
+		background-color: #EFF2FD;
+		font-size: 57px;
+		margin: 0 auto 
+		
+	}
+	.inputrow :hover{
+	}
+	.c1{
+		display: inline-block;
+		margin: 0 0 0 35px;
+		padding: 2px
+		
+	}
+	.c1:hover{
+	}
+	#one{
+		background-color: #BBB6B2;
+		margin: 7px;
+		margin-right: 25px;
+		
+	}
+	#one:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#two{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#two:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#three{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#three:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#four{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#four:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#five{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#five:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#six{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#six:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#seven{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+			}
+	#seven:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#eight{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#eight:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#nine{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#nine:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#zero{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#zero:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#dismule{
+		background-color: #BBB6B2;
+			margin: 7px;
+			margin-right: 25px;
+		
+	}
+	#dismule:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#plus{
+		background-color: #BBB6B2;
+			margin: 7px;
+			color: #7A452C;
+			margin-right: 25px;
+		}
+	#plus:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#minus{
+		background-color: #BBB6B2;
+			margin: 7px;
+			color: #7A452C;
+			margin-right: 25px;
+		
+	}
+	#minus:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#divid{
+		background-color: #BBB6B2;
+			margin: 7px;
+			color: #7A452C;
+			margin-right: 25px;
+		
+	}
+	#divid:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#times{
+		background-color: #BBB6B2;
+			margin: 7px;
+			color: #7A452C;
+			margin-right: 25px;
+		
+	}
+	#times:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+		#clear{
+		background-color: #BBB6B2;
+			margin: 7px;
+			color: #7A452C;
+			margin-right: 25px;
+		
+	}
+	#clear:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: .8
+	}
+	.operator{
+		width: 125px;
+		height: 125px;
+		background-color: #FFD700;
+		margin-left: 235px
+	}
+	.operator:hover{
+		box-shadow: 0px 0px 15px 0px black;
+		transform: scale(.95);
+		opacity: 1;
+		background-color: #FFE67B;
+	}
+	
+	.d1{
+		width: 50%;
+		height: 153px;
+		background-color: #BBB6B2;
+		position: absolute;
+		z-index: -1;
+		margin: 0 0 0 65%
+		
+	}
+	
+	.d2{
+		width: 650px;
+		height: 650px;
+		background-color: #BBB6B2;
+		position: absolute;
+		z-index: -1;
+		margin: -300px 0 0 15%;
+		border-radius: 505px
+		
+	}
+		.d3{
+		width: 50%;
+		height: 153px;
+		background-color: #7A452C;
+		position: absolute;
+		z-index: -1;
+		margin: 657px 0 0 -9%
+		
+	}
+	
+		.d4{
+		width: 736px;
+		height: 736px;
+		background-color: #7A452C;
+		position: absolute;
+		z-index: -1;
+		margin: 600px 0 0 31%;
+		border-radius: 505px
+		
+	}
+</style>
+<body>
+<div class="d1"></div>
+	<div class="d2"></div>
+	<div class="d3"></div>
+	<div class="d4"></div>
+<form name="calculator">
+  <div id="myCalculator">
+		<div id="top_display">
+		<input type="text" name="display" id="display" disabled>
+	</div>
+	<div class="inputrow">
+		
+		<div class="c1">
+		<input type="button" id="seven" value="7" onclick="calculator.display.value +='7'">
+		<input type="button" id="eight" value="8" onclick="calculator.display.value +='8'">
+		<input type="button" id="nine" value="9" onclick="calculator.display.value +='9'">
+		<input type="button" id="divid" value="/" onclick="calculator.display.value +='/'">
+		</div>
+		
+			<div class="c1">
+		<input type="button" id="four" value="4" onclick="calculator.display.value +='4'">
+		<input type="button" id="five" value="5" onclick="calculator.display.value +='5'">
+		<input type="button" id="six" value="6" onclick="calculator.display.value +='6'">
+		<input type="button" id="times" value="X" onclick="calculator.display.value +='*'">
+		</div>
+			<div class="c1">
+		<input type="button" id="one" value="1" onclick="calculator.display.value +='1'">
+		<input type="button" id="two" value="2" onclick="calculator.display.value +='2'">
+		<input type="button" id="three" value="3" onclick="calculator.display.value +='3'">
+		
+		
+		
+		<input type="button" id="minus" value="–" onclick="calculator.display.value +='-'">
+		</div>
+		
+		
+		
+			<div class="c1">
+		<input type="button" id="zero" value="0" onclick="calculator.display.value +='0'">
+		<input type="button" id="dismule" value="." onclick="calculator.display.value +='.'">
+		<input type="button" id="clear" value="C" onclick="calculator.display.value =''">
+		
+		<input type="button" id="plus" value="+" onclick="calculator.display.value +='+'">
+		</div>
+	  <input type="button" class="operator" name="equals" value="=" onclick="calculator.display.value=eval(calculator.display.value)">
+	</div>
+		
+	</div>
+	</form>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
