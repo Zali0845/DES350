@@ -32,7 +32,8 @@
 	left: 0px;
 	right: 0px;
 	bottom: 0px;
-margin: auto;		
+margin: auto;
+
 	
 	}
 	.neck-shade{
@@ -46,6 +47,7 @@ margin: auto;
 	right: 0px;
 	bottom: 0px;
 margin: auto;
+
 		
 	}
 }		
@@ -858,8 +860,8 @@ animation-delay: 0s;
 	}
 
 	@keyframes animateCloud{
-		0%{margin-left: -2800px;}
-			100%{margin-left: 100%}
+		0%{margin-left: -2800px;z-index: -4}
+			100%{margin-left: 100%;z-index: -4}
 	}
 	.x1{animation: animateCloud 120s linear infinite;
 	transform:scale(0.15);top:-300px}
@@ -891,6 +893,7 @@ animation-delay: 0s;
 		width: 609px;
 		height: 114px;
 		margin: auto;
+		z-index: -4;
 	}
 	.cb{
 		position: absolute;
@@ -902,6 +905,8 @@ animation-delay: 0s;
 	left: 350px;
 	right: 0px;
 	bottom: 0px;
+		z-index: -4
+		
 	}
 		.ct{
 		position: absolute;
@@ -914,6 +919,7 @@ animation-delay: 0s;
 	right: 0px;
 	bottom: 0px;
 		box-shadow: 15px 6px 0 #FECCFF, 210px -60px 0 50px white,225px -50px 0 50px #FECCFF;
+			z-index: -4
 	}
 	#background-warp{
 		bottom:0;
@@ -922,7 +928,7 @@ animation-delay: 0s;
 		position: fixed;
 		right: 0;
 		top:0;
-		z-index: -1:
+		z-index: -4:
 	}
 	audio{
 		background-color: white;
