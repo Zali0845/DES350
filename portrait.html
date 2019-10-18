@@ -1482,6 +1482,24 @@ animation-delay: 6s;
 		#face{
 			left:20px
 		}
+				@-webkit-keyframes headin{
+		0%{transform: rotatez(20deg); right:-140px;}
+			7%{
+				transform: rotatez(4deg);
+			}
+			11%{
+				transform: rotatez(-2deg); right:10px
+			}
+			17%,25%{transform: rotatez(0deg); right:0px
+				
+			}
+			30%,40%{
+			}
+			42%{
+				transform: rotate3d(0,0, 0, 0deg);
+			}
+			100%{margin-right: 0px; margin-top: 0px;}
+	}
 				@-webkit-keyframes Fboping{
 		0%{
 			transform: rotate3d(0,0, 0, 0deg);
@@ -1529,7 +1547,6 @@ animation-delay: 6s;
 				
 			}
 			30%,40%{
-				transform: rotate3d(1,0,1, 15deg); right:-0px;
 			}
 			42%{
 				transform: rotate3d(0,0, 0, 0deg);
