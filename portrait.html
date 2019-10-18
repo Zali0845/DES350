@@ -1350,11 +1350,13 @@ animation-delay: 6s;
 			z-index: -3;
 			margin: auto
 		}
-					@-webkit-keyframes Sboping{
+		@-webkit-keyframes Sboping{
 		0%{
 			transform: rotate3d(0,0, 0, 0deg);
-		
-			margin: auto
+			left:-265px;
+			bottom:0;
+			right:0;
+			z-index: -3
 			
 		}
 		5%,35%,65%{
@@ -1373,13 +1375,15 @@ animation-delay: 6s;
 		
 		100%{
 			transform: rotate3d(0,0, 0, 0deg);
-			
-			margin: auto
+			left:-265px;
+			bottom:0;
+			right:0;
+			z-index: -2
 			
 		}
 	}
 			.neck{
-			z-index: -2
+			z-index: -1
 		}
 		.neck-shade{
 			z-index:  -1;
@@ -1435,7 +1439,7 @@ animation-delay: 6s;
 		@-webkit-keyframes Sboping{
 		0%{
 			transform: rotate3d(0,0, 0, 0deg);
-			left:-300px;
+			left:-265px;
 			bottom:0;
 			right:0;
 			z-index: -3
@@ -1457,7 +1461,7 @@ animation-delay: 6s;
 		
 		100%{
 			transform: rotate3d(0,0, 0, 0deg);
-			left:-300px;
+			left:-265px;
 			bottom:0;
 			right:0;
 			z-index: -3
