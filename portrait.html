@@ -237,7 +237,7 @@ animation-delay: 0s;
 	right: 0px;
 	bottom: 0px;
 	margin: auto ;
-		overflow: hidden
+		overflow: hidden;
 		
 		
 	}
@@ -1044,6 +1044,7 @@ animation-delay: 6s;
 	}
 
 	.me{
+		top:-150px
 		
 	}
 	
@@ -1287,7 +1288,7 @@ animation-delay: 6s;
 				@-webkit-keyframes Sboping{
 		0%{
 			transform: rotate3d(0,0, 0, 0deg);
-			left:0;
+			left:0px;
 			bottom:0;
 			right:0;
 			
@@ -1308,12 +1309,13 @@ animation-delay: 6s;
 		
 		100%{
 			transform: rotate3d(0,0, 0, 0deg);
-			left:0;
+			left:0px;
 			bottom:0;
 			right:0;
 			
 		}
 	}
+
 	
 
 	.soulder{
@@ -1336,12 +1338,164 @@ animation-delay: 6s;
 					animation-duration: ease-out;
 				animation-iteration-count: infinite;
 	}
+	@media only screen and (max-width: 690px){
+		.me{
+			transform: scale(.37);
+			top:-40px
+			
+		}
+		.soulder{
+			left: -600px
+		}
+					@-webkit-keyframes Sboping{
+		0%{
+			transform: rotate3d(0,0, 0, 0deg);
+			left:-250px;
+			bottom:0;
+			right:0;
+			
+		}
+		5%,35%,65%{
+			transform: rotate(-5deg);
+			
+		}
+			20%,50%,80%{
+			transform: rotate(5deg);
+		}
+		
+		15%,30%,45%,60%,75%,95%{
+						transform: rotatey(0deg);
+			transform: rotate(0deg)
+
+		}
+		
+		100%{
+			transform: rotate3d(0,0, 0, 0deg);
+			left:-250px;
+			bottom:0;
+			right:0;
+			
+		}
+	}
+	}
+
+	
+	@media only screen and (max-width: 450px){
+		.me{
+			transform: scale(.5);
+			top:80px
+		}
+		#Ahead{
+			left:-40px;
+		}
+		.ears{
+			left: -75px
+		}
+		.ears-shade{
+			left:-30px;
+			width: 510px
+		}
+		.hair-back{
+			left:-43px
+		}
+		.beard-back{
+			left: -10px
+		}
+		.glasses-right{
+			left:229px
+		}
+		.beard-front{
+			left:40px
+		}
+		.hairfrontC{
+			left:310px
+		}
+		.hairfront{
+			left:-70px
+		}
+		.soulder{
+			left:-300px;
+			width: 1000px
+		}
+		
+		@-webkit-keyframes Sboping{
+		0%{
+			transform: rotate3d(0,0, 0, 0deg);
+			left:-300px;
+			bottom:0;
+			right:0;
+			
+		}
+		5%,35%,65%{
+			transform: rotate(-5deg);
+			
+		}
+			20%,50%,80%{
+			transform: rotate(5deg);
+		}
+		
+		15%,30%,45%,60%,75%,95%{
+						transform: rotatey(0deg);
+			transform: rotate(0deg)
+
+		}
+		
+		100%{
+			transform: rotate3d(0,0, 0, 0deg);
+			left:-300px;
+			bottom:0;
+			right:0;
+			
+		}
+	}
+		#cloud-scale{
+			transform: scale(.2)
+		}
+		#face{
+			left:20px
+		}
+				@-webkit-keyframes Fboping{
+		0%{
+			transform: rotate3d(0,0, 0, 0deg);
+			Top:0;
+			left:35px;
+			bottom:0;
+			right:0;
+			
+		}
+		5%,35%,65%{
+			top: 55px;
+			transform: rotatex(25deg);
+		}
+			20%,50%,80%{
+			top: 55px;
+			transform: rotatex(25deg);
+		}
+		
+		15%,30%,45%,60%,75%,95%{
+			top:0px;
+						transform: rotatey(0deg);
+			transform: rotate(0deg)
+
+		}
+		
+		100%{
+			transform: rotate3d(0,0, 0, 0deg);
+			Top:0;
+			left:35px;
+			bottom:0;
+			right:0;
+			
+		}
+	}
+	}
 	</style>
 <body>
 
 	<div class="bg"></div>
 
 <div id="background-warp">
+<div id="cloud-scale"></div>
 <div class="x1">
 	<div class="cloud">
 		<div class="cb"></div>
@@ -1426,7 +1580,8 @@ animation-delay: 6s;
 		<div class="re3"></div>
 		</div>
 	<div id="ebM">
-<div class="eyebrows"></div></div>
+<div class="eyebrows"></div>
+		</div>
 <div class="mouth">
 <div class="throat"></div>
 <div class="tongue"></div>
