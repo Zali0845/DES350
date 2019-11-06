@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NationPark</title>
+	<style>
+		Body{
+			background-color:black;
+			margin: 0;
+			padding: 0;
+		}
+		.card{
+			position: absolute;
+			left: 50%;
+			top:50%;
+			transform: translate(-50%,-50%);
+			width: 40%;
+			height: 90vh;
+			background: url("photo/Sposterb_w.jpg") no-repeat center;
+			background-size:contain;
+		}
+		.card:hover{
+			background:url("photo/posterM.gif") no-repeat center;
+			background-size: contain;
+			transition-duration:.8s;
+			
+			
+		}
+		#preload{
+			background:url("photo/posterM.gif") no-repeat -9999[x -9999px;]
+		}
+	
+	</style>
+</head>
+
+<body>
+	<div id="preload"></div>
+	<div class="card"></div>
+</body>
+</html>
