@@ -1,0 +1,496 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>National Park Website</title>
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	
+<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+	
+<style>
+	
+	body{
+		overflow-x: hidden;
+		font-family: Helvetica, Arial, sans-serif;
+
+	}
+
+
+/* ======================================================
+   text size
+   ====================================================== */
+	#header{
+		padding: 0%;
+		left: 30%;
+		top:50%;
+		position: absolute
+	}
+		#header2{
+		padding: 0%;
+		left: 30%;
+		top:50%;
+		position: absolute
+	}
+	h1{
+		font-family: 'Staatliches', cursive;
+		font-size: 200px;
+		color: white;
+		z-index: 1;
+		margin: auto
+	}
+	h2{
+		font-family: 'Roboto', sans-serif;
+		font-size: 50px;
+		color:white;
+		padding: 65px 0 0 150px
+		
+	}
+	
+	.sky{
+		  background-image: linear-gradient(#25C1FF, #77EEFF,#96FFFF);
+		width:  3000px;
+		height: 4200px;
+		margin: -140px 0 0 -50px;
+		position: absolute
+	}
+	.tree4{
+position: absolute;
+		width: 10%;
+		top:2350px;
+		left: 650px;
+	}
+
+	.floor{
+position: absolute;
+		width: 10%;
+		top: 3300px;
+		left:-350px
+	}
+
+	.tree3{
+position: absolute;
+		top:1830px;
+		left: 700px;
+	}
+	
+	.fronttree{
+position: absolute;
+		width: 10%;
+		left: -650px;
+		top:1300px;
+	}
+
+	.tree2{
+position: absolute;
+		width: 10%;
+		top:1620px;
+		left: -450px;
+	}
+	.floor2{
+position: absolute;
+		top:3200px;
+		left:-500px
+	}
+	.floor3{
+		position: absolute;
+		top:3700px;
+		left:-500px;
+	}
+	.roof{
+position: absolute;
+  height: auto;
+		top:1000px;
+		left:-150px
+	}
+	.roof img{
+		width: 130%;
+	}
+	.backgroundtrees{
+position: absolute;
+		width: 10%;
+		top:2350px;
+		left: 0px;
+	}
+	
+	.cloud{
+position: absolute;
+		width: 10%;
+		top: -50px;
+		left:-50px
+	}
+	.resizeH{
+		  width: 100%;
+		  overflow: hidden;
+		  white-space: nowrap;
+		  line-height: 0;
+		  word-spacing: -4px;
+	}
+
+	
+/* ======================================================
+   medium size
+   ====================================================== */
+	@media (max-width: 1100px ) {
+		
+		#header{
+		left: 20%;
+	
+	}
+		#header2{
+		left: 20%;
+		
+	}
+	.tree4{
+		top:1600px;
+		left: 300px;
+	}
+		.tree4 img{
+			width: 300px;
+			
+		}
+
+	.floor{
+		width: 10%;
+		top: 2400px;
+		left:-50px
+	}
+		.floor img{
+			width: 1200px;
+		}
+
+	.tree3{
+		top:1520px;
+		left: 430px;
+	}
+		.tree3 img{
+			width: 400px
+		}
+	
+	.fronttree{
+		left: -400px;
+		top:1200px;
+	}
+		.fronttree img{
+			width: 1650px
+		}
+
+	.tree2{
+		top:1420px;
+		left: -260px;
+	}
+		.tree2 img{
+			width: 1200px
+		}
+	.floor2{
+		top:2300px;
+		left:-200px
+	}
+		.floor2 img{
+			width: 1200px
+		}
+	.floor3{
+		top:2550px;
+		left:-500px;
+	}
+		.floor img{
+			width: 1200px;
+		}
+	.roof{
+		top:1000px;
+		left:-100px
+	}
+	.roof img{
+		width: 1200px;
+	}
+	.backgroundtrees{
+		top:1700px;
+		left: 0px;
+	}
+		.backgroundtrees img{
+			width: 1100px;
+		}
+	
+	.cloud{
+		top: -50px;
+		left:-50px
+	}
+		.cloud img{
+		width: 1100px;
+			
+		}
+		
+	}
+	
+	@media (max-width: 800px ) {
+				#header{
+		left: 10%;
+	
+	}
+		#header2{
+		left: 10%;
+		
+	}
+	.tree4{
+		top:1600px;
+		left: 250px;
+	}
+		.tree4 img{
+			width: 300px;
+			
+		}
+
+	.floor{
+		top: 2400px;
+		left:-100px
+	}
+		.floor img{
+			width: 1200px;
+		}
+
+	.tree3{
+		top:1550px;
+		left: 350px;
+	}
+	
+	.fronttree{
+		left: -500px;
+		top:1200px;
+	}
+		.fronttree img{
+			width: 1650px
+		}
+
+	.tree2{
+		top:1390px;
+		left: -350px;
+	}
+		.tree2 img{
+			width: 1200px
+		}
+	.floor2{
+		top:2300px;
+		left:-200px
+	}
+		.floor2 img{
+			width: 1200px
+		}
+	.floor3{
+		top:2500px;
+		left:-500px;
+	}
+		.floor img{
+			width: 1200px;
+		}
+	.roof{
+		top:1000px;
+		left:-150px
+	}
+	.roof img{
+		width: 1200px;
+	}
+	.backgroundtrees{
+		top:1700px;
+		left: -80px;
+	}
+		.backgroundtrees img{
+			width: 1100px;
+		}
+	
+	.cloud{
+		top: 1100px;
+		left:-50px
+	}
+		.cloud img{
+		width: 1000px;
+			
+		}
+	}
+		@media (max-width: 650px ) {
+			h1{
+				font-size: 155px
+			}
+			h2{
+font-size: 40px;
+		padding: 70px 0 0 120px
+			
+			}
+	}
+
+		@media (max-width: 400px ) {
+	h1{
+				font-size: 100px
+			}
+			h2{
+font-size: 30px;
+		padding: 50px 0 0 70px
+			
+			}
+			#header{
+				top:20%
+			}
+		#header2{
+				top:20%
+			}
+
+	
+.tree4{
+		top:1000px;
+		left: 80px;
+	}
+		.tree4 img{
+			width: 150px;
+			
+		}
+
+	.floor{
+		top: 2400px;
+		left:-100px
+	}
+		.floor img{
+			width: 1200px;
+		}
+
+	.tree3{
+		top:940px;
+		left: 150px;
+	}
+			.tree3 img{
+				width: 200px
+			}
+	
+	.fronttree{
+		left: -230px;
+		top:800px;
+	}
+		.fronttree img{
+			width: 800px
+		}
+
+	.tree2{
+		top:890px;
+		left: -170px;
+	}
+		.tree2 img{
+			width: 600px
+		}
+	.floor2{
+		top:1350px;
+		left:-100px;
+	}
+		.floor2 img{
+			width: 600px
+		}
+	.floor3{
+		top:1450px;
+		left:-150px;
+	}
+			.floor3 img{
+				width: 600px;
+				height: 600px
+			}
+			.floor{
+				top:1450px;
+			}
+		.floor img{
+			width: 600px;
+		}
+	.roof{
+		top:700px;
+		left: -80px
+	}
+	.roof img{
+		width: 600px;
+	}
+	.backgroundtrees{
+		top:1020px;
+		left: -80px;
+	}
+		.backgroundtrees img{
+			width: 500px;
+		}
+	
+	.cloud{
+		top: 600px;
+		left:-50px
+	}
+		.cloud img{
+		width: 600px;
+			
+		}
+.sky{
+height: 1700px;				
+			}
+			
+
+		
+	}
+
+	</style>
+</head>
+
+<body>
+
+
+<div class="resizeH">
+<div class="sky"></div>
+
+	
+<div class="cloud">
+	<img src="image/cloud.png" alt="" data-rellax-speed="2"></div>
+	
+
+	
+<div class="backgroundtrees rellax" data-rellax-speed="-1">
+	<img src="image/backgroundtrees.png" alt=""></div>
+	<div id="header">
+	<h1 class="h rellax" data-rellax-speed="-9.5">SEQUOIA</h1>
+	
+</div>	
+	
+<div class="roof rellax" data-rellax-speed="0">
+	<img src="image/roof.png" alt=""></div>	
+<div class="floor2 rellax" data-rellax-speed="0">
+	<img src="image/floor2.png" alt=""></div>
+	
+
+	<div class="tree3 rellax" data-rellax-speed="-1" >
+	<img src="image/tree3.png" alt="">
+</div>
+<div class="tree4 rellax" data-rellax-speed="0">
+	<img src="image/tree4.png" alt="">
+	</div>
+	<div id="header2">
+	<h2 class="h rellax" data-rellax-speed="-9">Nation Park</h2>
+</div>	
+	<div class="floor3">
+	<img src="image/floor3.png" alt="">
+	</div>
+
+<div class="floor rellax" data-rellax-speed="1">
+	<img src="image/floor.png" alt="">
+
+	</div>
+<div class="tree2 rellax" data-rellax-speed="-0.2">
+	<img src="image/tree2.png" alt=""></div>	
+	<div class="fronttree rellax" data-rellax-speed="0">
+	<img src="image/front tree.png" alt=""></div>	
+
+
+	</div>
+
+	<!-- javascript by Dixon and Moe:!-->
+	<script type="text/javascript" src="js/rellax.js"></script>
+	
+	<script>
+	var rellax = new Rellax('.rellax',{ // center: true
+	callback: function(position){
+	// callback every postion change
+	console.log(position);
+	}
+	});
+	
+	</script>
+
+</body>
+</html>
