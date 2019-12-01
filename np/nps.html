@@ -13,7 +13,7 @@
 	body{
 		overflow-x: hidden;
 		font-family: Helvetica, Arial, sans-serif;
-		background-color: blue ;
+		background-color: black;
 		margin:0px;
 
 	}
@@ -28,15 +28,40 @@
 	}
 	#header{
 		padding: 0%;
-		left: 30%;
+		left: 50%;
 		top:50%;
-		position: absolute
+		position: absolute;
+					transform: translate( -50%);
+		z-index: -1
+
 	}
 		#header2{
 		padding: 0%;
-		left: 30%;
+		left: 45%;
 		top:50%;
-		position: absolute
+		position: absolute;
+						transform: translate( -50%);
+			z-index: -1
+
+	}
+		#header3{
+		padding: 0%;
+		left: 50%;
+		top:50%;
+		position: absolute;
+			transform: translate( -50%);
+			display: none;
+			
+	}
+		#header4{
+		padding: 0%;
+		left: 45%;
+		top:50%;
+		position: absolute;
+			display: none;
+			
+						transform: translate( -50%)
+
 	}
 	h1{
 		font-family: 'Staatliches', cursive;
@@ -59,7 +84,8 @@
 	}
 	h4{
 		font-size: 30px;
-		color:white
+		color:white;
+		margin-bottom: 0px
 		
 	}
 	h5{
@@ -73,29 +99,36 @@
 		margin-bottom: 150px
 	}
 	#col1{
-		width: 285px;
+		max-width: 285px;
 		display:inline-block;
 		padding: 0 0 0 0%
 	}
 		#col2{
-		width: 285px;
+		max-width: 285px;
 		display:inline-block;
 float: right	}
 	
 		#col3{
-		width: 285px;
+		max-width: 285px;
 		display:inline-block;
-		padding: 0 0 0 0%
+		margin: 0 4%;
+			float: left
 	}
 		#col4{
-		width: 285px;
+		max-width: 285px;
 		display:inline-block;
-		padding: 0 0 0 15%
+		align-items: center;
+		justify-content: center;
+		margin: 0 4%;
+			float: left
 	}
 		#col5{
-		width: 285px;
+		max-width: 285px;
 		display:inline-block;
-			float:right
+		margin: 0 4%;
+			float: left
+
+			
 	}
 	
 	p{
@@ -105,13 +138,18 @@ float: right	}
 	#contain{
 		position: relative;
 		max-width: 767px;
-		margin: auto;
+		margin: 60px auto;
+		padding: 6%
 		
 	}
 		#contain2{
-		position: relative;
 		max-width: 1250px;
-		margin: auto;
+			display: flex;
+		align-items: center;
+		justify-content: center;
+			margin: 0 auto 60px;;
+			padding: 0 6%;
+
 		
 	}
 	.center{
@@ -122,7 +160,7 @@ float: right	}
 	
 	.spacer{
 
-		margin-top: 5400px
+		margin-top: 4900px
 	}
 
 	.sky{
@@ -143,13 +181,13 @@ position: absolute;
 	.floor{
 position: absolute;
 		width: 10%;
-		top: 3300px;
-		left:-350px
+		top: 3500px;
+		left:-300px
 	}
 
 	.tree3{
 position: absolute;
-		top:1830px;
+		top:1670px;
 		left: 700px;
 	}
 
@@ -184,6 +222,7 @@ position: absolute;
 	}
 	.floor3 img{
 		width:2500px;
+		height: 1400px
 	}
 	.roof{
 position: absolute;
@@ -199,13 +238,15 @@ position: absolute;
 		width: 10%;
 		top:2350px;
 		left: 0px;
+		z-index: -1
 	}
 
 	.cloud{
 position: absolute;
 		width: 10%;
 		top: -50px;
-		left:-50px
+		left:-50px;
+		z-index: -1
 	}
 	.resizeH{
 		  width: 100%;
@@ -362,12 +403,120 @@ position: absolute;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-
 		
 		
 	}
 	
+	@keyframes animateCloud{
+		0%{margin-left: -2600px;z-index: -4}
+			100%{margin-left: 100%;z-index: -4}
+	}
+	.x1{animation: animateCloud 45s linear infinite;
+	transform:scale(0.15);top:-00px}
+	
+	.x2{animation: animateCloud 25s linear infinite;
+	transform:scale(0.3);}
+	
+	.x3{animation: animateCloud 30s linear infinite;
+	transform:scale(0.15);top:-150px}
+	
+	.x4{animation: animateCloud 35s linear infinite;
+	transform:scale(0.1);top:-200px}
+	
+	.x5{animation: animateCloud 22s linear infinite;
+	transform:scale(0.3);top:400px}
+	.cloud{
+		background: white;
+		
+		border-radius: 100px;
+		position: relative;
+		width: 609px;
+		height: 114px;
+		margin: auto;
+		z-index: -90;
+	}
+	.cb{
+		position: absolute;
+		width: 272px;
+		height: 151px;
+		background-color: white;
+		border-radius: 151px;
+		top:-35px;
+	left: 350px;
+	right: 0px;
+	bottom: 0px;
+		z-index: -90
+		
+	}
+		.ct{
+		position: absolute;
+		width: 223px;
+		height: 223px;
+		background-color: white;
+		border-radius: 223px;
+		top:-135px;
+	left: 50px;
+	right: 0px;
+	bottom: 0px;
+		box-shadow: 15px 6px 0 #599ABC, 210px -60px 0 50px white,225px -50px 0 50px #599ABC;
+			z-index: -90
+	}
+	#background-warp{
+		bottom:0;
+		left:0;
+		padding-top: 50px;
+		position: absolute;
+		right: 0;
+		top:0;
+		z-index: -90:
+	}	
+/* ======================================================
+   medium size
+   ====================================================== */
+	@media (max-width: 1600px ) {
+		
+		.tree2{
+			top:1650px
+		}
+		.tree3{
+			top:1800px
+		}
+		.backgroundtrees{
+			left: 150px
+		}
+	
+	}
+	
+		@media (max-width: 1280px ) {
 
+			#col3{
+		max-width: 285px;
+		display:inline-block;
+		margin: 0%;
+			float: left
+	}
+		#col4{
+		max-width: 285px;
+		display:inline-block;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0%;
+			float: right
+	}
+		#col5{
+		max-width: 285px;
+		display:inline-block;
+		margin: 0 4%;
+			float: left
+
+			
+	}
+			#contain2{
+						max-width: 767px;
+				padding: 6%
+
+			}
+	
 /* ======================================================
    medium size
    ====================================================== */
@@ -375,13 +524,12 @@ position: absolute;
 		body{
 			overflow-x: hidden
 		}
+	
 
 		#header{
-		left: 20%;
 
 	}
 		#header2{
-		left: 20%;
 
 	}
 	.tree4{
@@ -463,18 +611,24 @@ position: absolute;
 
 		}
 	.spacer{
-			margin-top: 4200px
+			margin-top: 3700px
 		}
+	
 
 	}
+/* ======================================================
+   medium size
+   ====================================================== */
 
 	@media (max-width: 800px ) {
+		
+		#cloud-scale{
+			transform: scale(.3)
+		}
 				#header{
-		left: 10%;
 
 	}
 		#header2{
-		left: 10%;
 
 	}
 	.tree4{
@@ -556,9 +710,36 @@ position: absolute;
 		}
 		
 		.spacer{
-			margin-top: 4000px
+			margin-top: 3700px
 		}
+		
+			#col3{
+		max-width: 285px;
+		display:inline-block;
+		margin: 0 0%;
+			float: left
 	}
+		#col4{
+		max-width: 285px;
+		display:inline-block;
+		align-items: center;
+		justify-content: center;
+		margin: 0 0%;
+			float: right
+	}
+		#col5{
+		max-width: 285px;
+		display:inline-block;
+		margin: 0 0%;
+			float: left
+
+			
+	}
+	}
+	/* ======================================================
+   medium size
+   ====================================================== */
+	
 	@media (max-width: 650px ) {
 			h1{
 				font-size: 155px
@@ -577,16 +758,14 @@ font-size: 30px;
 
 			}
 			#header{
-				top:20%
 			}
 		#header2{
-				top:20%
 			}
 
 
 .tree4{
-		top:1000px;
-		left: 80px;
+		top:1020px;
+		left: 150px;
 	}
 		.tree4 img{
 			width: 150px;
@@ -594,7 +773,7 @@ font-size: 30px;
 		}
 
 	.floor{
-		top: 1500px;
+		top: 1400px;
 		left:-100px
 	}
 		.floor img{
@@ -602,8 +781,8 @@ font-size: 30px;
 		}
 
 	.tree3{
-		top:940px;
-		left: 150px;
+		top:1000px;
+		left: 270px;
 	}
 			.tree3 img{
 				width: 200px
@@ -632,7 +811,7 @@ font-size: 30px;
 			width: 750px
 		}
 	.floor3{
-		top:1450px;
+		top:1550px;
 		left:-50px;
 	}
 			.floor3 img{
@@ -667,14 +846,126 @@ font-size: 30px;
 height: 1700px;
 			}
 		.spacer{
+			margin-top: 2050px
+		}
+		
+		#contain{
+			width: 90%
+		}
+		#contain2{
+			width: 90%
+		}
+		.et1{
+		font-size: 40px;
+		font-weight: 300;
+		padding-right: 0%;
+		margin-bottom: 50px
+	}
+	.et2{
+		font-size: 40px;
+		font-weight: 300;
+		padding-right:0% ;
+		padding-left: 0%;
+		margin-bottom: 50px;
+	}
+	.pinfo{
+		padding: 6%;
+	}
+	p{
+		color: white;
+		font-family: Roboto, Arial, "sans-serif";
+		font-size: 30px
+
+	}
+		
+	#contain{
+		position: relative;
+		max-width: 100%;
+		margin: 60px auto;
+		
+	}
+		#contain2{
+		position: relative;
+		max-width: 100%;
+		margin: 60px auto;
+		
+	}
+	.center{
+		width: 100%;
+		position: relative;
+		margin: ;
+	}
+		
+	#col1{
+		max-width: 100%;
+		display:inline-block;
+		padding: 0 0 0 0%
+	}
+		#col2{
+		max-width: 100%;
+		display:inline-block;
+float: right	}
+	
+		#col3{
+		max-width: 100%;
+		display:inline-block;
+		padding: 0 0 0 0%
+	}
+		#col4{
+		max-width: 100%;
+		display:inline-block;
+		padding: 0 0 0 0%
+	}
+		#col5{
+		max-width: 100%;
+		display:inline-block;
+			float:right
+	}
+
+		.leftcolumn{
+		display:block;
+		float:none;
+		width: 100%;
+		padding-right:0%;
+		overflow: hidden
+	}
+	
+		.midcolumn{
+		display:block;
+		float:none;
+		width: 100%;
+		padding-right:0%;
+	}
+	
+		.rightcolumn{
+		display:block;
+		float:none;
+		width: 100%;
+	}
+		.ads{
+		display: block;
+		align-items: center;
+		justify-content: center;
+		padding: 6%
+	}
+		h6{
+			padding: 6%;
+			
+		}
+		h5{
+			padding: 6%;
+			font-size:40px
+			
+		}
+		.spacer{
 			margin-top: 2000px
 		}
 
 
-
-
 	}
-
+/* ======================================================
+   medium size
+   ====================================================== */
 		@media (max-width: 400px ) {
 	h1{
 				font-size: 100px
@@ -685,11 +976,23 @@ font-size: 30px;
 
 			}
 			#header{
-				top:20%
+				display: ;
 			}
 		#header2{
-				top:20%
+			display: ;
 			}
+			
+				#header3{
+				display: none;
+					top: 20%;
+
+			}
+		#header4{
+			display: none;
+			top: 20%;
+
+			}
+			
 
 
 .tree4{
@@ -783,6 +1086,10 @@ height: 1700px;
 
 
 	}
+	.b1{
+		width: 200px
+	}
+	
 
 /* ======================================================
    General Rules
@@ -798,7 +1105,42 @@ height: 1700px;
 <div class="resizeH">
 <div class="sky"></div>
 
+<div id="background-warp">
+<div id="cloud-scale"></div>
+<div class="x1">
+	<div class="cloud">
+		<div class="cb"></div>
+		<div class="ct"></div>
+	</div>
+</div>
+	<div class="x2">
+	<div class="cloud">
+	<div class="cb"></div>
+		<div class="ct"></div></div>
+</div>
+	
+<div class="x3">
+	<div class="cloud">
+	<div class="cb"></div>
+		<div class="ct"></div></div>
+</div>
+<div class="x4">
+	<div class="cloud">
+	<div class="cb"></div>
+		<div class="ct"></div></div>
+</div><div class="x5">
+	<div class="cloud">
+	<div class="cb"></div>
+		<div class="ct"></div></div>
+</div>
+	
+<div class="x6">
+	<div class="cloud">
+	<div class="cb"></div>
+		<div class="ct"></div></div>
+</div>
 
+	</div>
 <div class="cloud">
 	<img src="image/cloud.png" alt="" data-rellax-speed="2"></div>
 
@@ -807,7 +1149,12 @@ height: 1700px;
 <div class="backgroundtrees rellax" data-rellax-speed="-1">
 	<img src="image/backgroundtrees.png" alt=""></div>
 	<div id="header">
-	<h1 class="h rellax" data-rellax-speed="-4">SEQUOIA</h1>
+	<h1 class="h rellax" data-rellax-speed="-9.5">SEQUOIA</h1>
+
+</div>
+
+<div id="header3">
+	<h1 class="h rellax" data-rellax-speed="-4.5">SEQUOIA</h1>
 
 </div>
 
@@ -824,7 +1171,11 @@ height: 1700px;
 	<img src="image/tree4.png" alt="">
 	</div>
 	<div id="header2">
-	<h2 class="h rellax" data-rellax-speed="-4.5">Nation Park</h2>
+	<h2 class="h rellax" data-rellax-speed="-9">Nation Park</h2>
+</div>
+	
+	<div id="header4">
+	<h2 class="h rellax" data-rellax-speed="-4">Nation Park</h2>
 </div>
 	<div class="floor3">
 	<img src="image/floor3.png" alt="">
@@ -847,7 +1198,7 @@ height: 1700px;
 	<section id="info">
 		<div class="bgc1">
 			<div class="pinfo">
-	<h3>Explore The Forest</h3>
+	<h3 class="rellax" data-rellax-speed=".1">Explore The Forest</h3>
 		<div class="et1">
 		<p>Sequoia National Park is adjacent to Kings Canyon National Park in California’s southern Sierra Nevada mountains.</p>
 		</div>
@@ -869,7 +1220,7 @@ height: 1700px;
 		
 
 		<div class="bgc2">
-			<h3 style="padding-left: 12%; margin-top: 100px">Activities</h3>
+			<h3 style="padding-left: 12%; margin-top: 100px" >Activities</h3>
 			
 			<div id="contain">
 				
@@ -882,9 +1233,9 @@ height: 1700px;
 				</div>
 				
 				<div id="col2">
-				<img src="image/actives icon-03.svg" alt="icon">
-				<h4>Horseback Riding</h4>
-				<p>Whether you bring your own stock or use one of the pack stations in these parks, a trip on horseback is a great way to see the parks.</p>
+				<img src="image/actives icon-02.svg" alt="icon">
+				<h4>Dark Sky Festival</h4>
+				<p>Share your passion for the night sky! Join us for the Dark Sky Festival, hosted in partnership with the Sequoia Parks Conservancy.</p>
 				</div>
 				</div>
 			
@@ -893,21 +1244,22 @@ height: 1700px;
 					<div id="contain2">
 				<div class="center">
 				<div id="col3">
-				<img src="image/actives icon-03.svg" alt="icon">
-				<h4>Horseback Riding</h4>
-				<p>Whether you bring your own stock or use one of the pack stations in these parks, a trip on horseback is a great way to see the parks.</p>
+				<img src="image/actives icon-04.svg" alt="icon">
+				<h4>Rock Climbing</h4>
+				<p>Granite cliffs and domes provide excellent opportunities for climbing in these parks. Climb on!</p>
 				</div>
 				
 				<div id="col4" style="align-content: center lign: ">
-				<img src="image/actives icon-03.svg" alt="icon">
-				<h4>Horseback Riding</h4>
-				<p>Whether you bring your own stock or use one of the pack stations in these parks, a trip on horseback is a great way to see the parks.</p>
+				<img src="image/actives icon-05.svg" alt="icon">
+				<h4>Exploring Giant Sequoia Groves</h4>
+				<p>Whether you see them from your car or hike to a remote grove, giant sequoias inspire awe and wonder.</p>
 				</div>
 					
 				<div id="col5">
-				<img src="image/actives icon-03.svg" alt="icon">
-				<h4>Horseback Riding</h4>
-				<p>Whether you bring your own stock or use one of the pack stations in these parks, a trip on horseback is a great way to see the parks.</p>
+				<img src="image/actives icon-06.svg" alt="icon">
+				<h4>Skiing & Snowshoeing
+</h4>
+				<p>Ski and snowshoe trails offer a way to travel through Giant Forest and Grant Grove in winter.</p>
 				</div>
 				</div>
 			
@@ -942,8 +1294,8 @@ var total_images = 3;
 var random_number = Math.floor((Math.random()*total_images));
 var random_img = new Array();
 random_img[0] = '<a href="page1.html"><img src="https://vweiss4.github.io/DES350/poster-2.gif" width="100%"></a>';
-random_img[1] = '<a href="page2.html"><img src="https://avelaz36.github.io/DES350/np_poster.gif" width="100%"></a>';
-random_img[2] = '<a href="page3.html"><img src="https://lpark25.github.io/DES350/Comp-1_1.gif" width="100%"></a>';
+random_img[1] = '<a href="page2.html"><img src="https://k11borrero.github.io/DES350/finalparksposter.gif" width="100%"></a>';
+random_img[2] = '<a href="page3.html"><img src="https://anhvyb.github.io/DES350/posterRRRb%203_1.gif" width="100%"></a>';
 document.write(random_img[random_number]);
 </script>
 				</div><!--
@@ -953,9 +1305,9 @@ document.write(random_img[random_number]);
 var total_images = 3;
 var random_number = Math.floor((Math.random()*total_images));
 var random_img = new Array();
-random_img[0] = '<a href="page1.html"><img src="https://vweiss4.github.io/DES350/poster-2.gif" width="100%"></a>';
-random_img[1] = '<a href="page2.html"><img src="https://avelaz36.github.io/DES350/np_poster.gif" width="100%"></a>';
-random_img[2] = '<a href="page3.html"><img src="https://lpark25.github.io/DES350/Comp-1_1.gif" width="100%"></a>';
+random_img[0] = '<a href="page1.html"><img src="https://kdirnb2.github.io/DES350/newposter.gif" width="100%"></a>';
+random_img[1] = '<a href="page2.html"><img src="https://tmfriese.github.io/DES350/Comp-1_4.gif" width="100%"></a>';
+random_img[2] = '<a href="page3.html"><img src="https://agarc88.github.io/DES350/Mesa-Verde-Poster-1_1.gif" width="100%"></a>';
 document.write(random_img[random_number]);
 </script>			
 				</div><!--
@@ -967,14 +1319,16 @@ var total_images = 3;
 var random_number = Math.floor((Math.random()*total_images));
 var random_img = new Array();
 random_img[0] = '<a href="page1.html"><img src="https://vweiss4.github.io/DES350/poster-2.gif" width="100%"></a>';
-random_img[1] = '<a href="page2.html"><img src="https://avelaz36.github.io/DES350/np_poster.gif" width="100%"></a>';
-random_img[2] = '<a href="page3.html"><img src="https://lpark25.github.io/DES350/Comp-1_1.gif" width="100%"></a>';
+random_img[1] = '<a href="page2.html"><img src="https://cgasid2.github.io/DES350/final-poster-animation-.gif" width="100%"></a>';
+random_img[2] = '<a href="page3.html"><img src="https://gira006.github.io/DES350/poster_animation.gif" width="100%"></a>';
 document.write(random_img[random_number]);
 </script></div>
 	</div>
 	
 	
-	
+			<a href="https://en.wikipedia.org/wiki/Sequoia_National_Park" style="text-decoration: none"><h3 style="color:black; display: flex;
+		align-items: center; justify-content: center;">Sequoia Wiki</h3></a>
+
 		
 		</div>
 	</section>
